@@ -1,7 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Homepage } from './components/homepage/Homepage';
-import { InfoPage } from './components/info/InfoPage';
-import { Navbar } from './components/Navbar';
+import { Homepage } from '../homepage/Homepage';
+import { InfoPage } from '../info/InfoPage';
+import { Navbar } from '../navbar/Navbar';
+import "./App.scss";
 
 function App() {
     return <BrowserRouter>
