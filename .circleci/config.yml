@@ -13,8 +13,21 @@ jobs:
       - run:
           command: npm run test
           name: Run tests
+  check-formatting:
+    docker:
+      - image: cimg/node:16.13.1
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: npm
+      - run:
+          command: npx prettier --check .
+          name: Run prettier
 
 workflows:
   test:
     jobs:
       - test
+  check-formatting:
+    jobs:
+      - check-formatting
