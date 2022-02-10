@@ -1,6 +1,6 @@
-import { render } from '@testing-library/react';
-import App from './App';
+import { render } from "@testing-library/react";
+import App from "./App";
 
-test('web page renders without error', () => {
+test("web page renders without error", () => {
   render(<App />);
 });

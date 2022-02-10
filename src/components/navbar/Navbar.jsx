@@ -2,21 +2,24 @@ import { Link } from "react-router-dom";
 import "./Navbar.scss";
 
 export const Navbar = () => {
-    return <nav>
-        <Link className="logo" to="/">
-            <img src="/mars-mission.png" alt="Mars Mission logo" width="50" height="50" />
-        </Link>
-        <ul>
-            <li>
-                <Link to="/">
-                    Home
-                </Link>
-            </li>
-            <li>
-                <Link to="/info">
-                    Info
-                </Link>
-            </li>
-        </ul>
+  return (
+    <nav>
+      <Link className="logo" to="/">
+        <img
+          src="/mars-mission.png"
+          alt="Mars Mission logo"
+          width="50"
+          height="50"
+        />
+      </Link>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/info">Info</Link>
+        </li>
+      </ul>
     </nav>
-}
+  );
+};
