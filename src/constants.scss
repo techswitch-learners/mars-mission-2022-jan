@@ -1,0 +1,19 @@
+/* Base colour scheme */
+$primary-colour: #c0844f;
+$secondary-colour: #456990;
+$foreground-colour: #f1fffa;
+$background-colour: #0f1108;
+
+/* Modified colours */
+$primary-light: scale-color($primary-colour, $lightness: 10%, $saturation: -5%);
+$secondary-light: scale-color(
+  $secondary-colour,
+  $lightness: 10%,
+  $saturation: -5%
+);
+$primary-dark: scale-color($primary-colour, $lightness: -20%, $saturation: 5%);
+$secondary-dark: scale-color(
+  $secondary-colour,
+  $lightness: -10%,
+  $saturation: 10%
+);
