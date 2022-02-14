@@ -10,7 +10,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/info" element={<InfoPage />} />
+        <Route path="/go-roving" element={<InfoPage />} />
       </Routes>
     </BrowserRouter>
   );
