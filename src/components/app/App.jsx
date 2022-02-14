@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Homepage } from "../homepage/Homepage";
-import { InfoPage } from "../info/InfoPage";
+import { GoRovingPage } from "../go-roving/GoRovingPage";
 import { Navbar } from "../navbar/Navbar";
 import "./App.scss";
 
@@ -10,7 +10,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/go-roving" element={<InfoPage />} />
+        <Route path="/go-roving" element={<GoRovingPage />} />
       </Routes>
     </BrowserRouter>
   );
