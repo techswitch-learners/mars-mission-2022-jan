@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
+import { getGoRovingPhotoList } from "../../../clients/grplClient";
 
 export function GoRovingPhotoListPage() {
   const [photoList, setPhotoList] = useState();
 
   useEffect(function () {
-    fetch(
-      `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=2&api_key=DEMO_KEY`
-    )
-      .then((response) => response.json())
-      .then((photoListJson) => setPhotoList(photoListJson.photos));
+    async function fetchAndSetGrpl() {
+      setPhotoList(await getGoRovingPhotoList());
+    }
+    fetchAndSetGrpl();
   }, []);
 
   let listPhotos;
