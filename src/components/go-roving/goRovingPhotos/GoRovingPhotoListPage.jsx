@@ -15,7 +15,11 @@ export function GoRovingPhotoListPage() {
   if (photoList !== undefined) {
     listPhotos = (
       <>
-        <img src={photoList[0].img_src} />
+        {photoList.map((photo) => (
+          <li>
+            <img src={photo.img_src} />
+          </li>
+        ))}
       </>
     );
   } else {
