@@ -19,6 +19,9 @@ export const Navbar = () => {
         <li>
           <Link to="/go-roving">Go Roving!</Link>
         </li>
+        <li>
+          <Link to="/Asteroids">Asteroids</Link>
+        </li>
       </ul>
     </nav>
   );
