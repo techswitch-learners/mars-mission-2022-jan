@@ -5,7 +5,6 @@ export const GoRovingPage = () => {
   return (
     <main>
       <h1>Go Roving!</h1>
-      <p>Mars Mission Go Roving! page</p>
       <Link to="/go-roving/curiosity">
         <h2>Curiosity</h2>
       </Link>
