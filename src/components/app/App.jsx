@@ -3,7 +3,7 @@ import { Homepage } from "../homepage/Homepage";
 import { GoRovingPage } from "../go-roving/GoRovingPage";
 import { Navbar } from "../navbar/Navbar";
 import "./App.scss";
-import { Asteroids } from "../asteroids/Asteroids";
+import { AsteroidsPage } from "../asteroids/AsteroidsPage";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/go-roving" element={<GoRovingPage />} />
-        <Route path="/asteroids" element={<Asteroids />} />
+        <Route path="/asteroids" element={<AsteroidsPage />} />
       </Routes>
     </BrowserRouter>
   );

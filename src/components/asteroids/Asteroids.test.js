@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
-import { Asteroids } from "./Asteroids";
+import { AsteroidsPage } from "./AsteroidsPage";
 
 test("renders asteroid page", async () => {
-  render(<Asteroids />);
+  render(<AsteroidsPage />);
 });

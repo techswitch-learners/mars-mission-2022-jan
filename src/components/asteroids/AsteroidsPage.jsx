@@ -1,5 +1,5 @@
 import React from "react";
 
-export function Asteroids() {
+export function AsteroidsPage() {
   return <main></main>;
 }
