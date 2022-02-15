@@ -20,7 +20,7 @@ export const Navbar = () => {
           <Link to="/go-roving">Go Roving!</Link>
         </li>
         <li>
-          <Link to="/Asteroids">Asteroids</Link>
+          <Link to="/asteroids">Asteroids</Link>
         </li>
       </ul>
     </nav>
