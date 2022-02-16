@@ -17,7 +17,7 @@ export function PictureOfTheDay() {
   return (
     <section>
       <h1>NASA Astronomy Picture of the Day: {imageTitle}</h1>
-      <img src={imageUrl} width="325" height="275"></img>
+      <img src={imageUrl}></img>
       <figcaption>{imageCaption}</figcaption>
     </section>
   );
