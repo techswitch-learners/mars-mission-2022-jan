@@ -7,9 +7,9 @@ import { GoRovingPhotoList } from "./GoRovingPhotoList";
 export function GoRovingPhotosPage() {
   const [photos, setPhotos] = useState();
   const [selectedPhoto, setSelectedPhoto] = useState();
-
   const params = useParams();
   const sol = 2000;
+
   useEffect(function () {
     async function fetchAndSetPhotos() {
       const fetchPhotos = await getRoverPhotos(params.roverName, sol);
@@ -25,28 +25,17 @@ export function GoRovingPhotosPage() {
       <>
         {photos.length ? (
           <div>
-            <GoRovingPhoto
-              imgSrc={selectedPhoto?.img_src}
-              camera={selectedPhoto?.camera?.name}
-            />
-            <h>👆Selected Photo</h>
-
-            <h>👇Go Roving Photo List</h>
+            {selectedPhoto ? (
+              <GoRovingPhoto photo={selectedPhoto} /> //defaults first photo as the main photo
+            ) : (
+              <h2> No photos selected </h2>
+            )}
             <GoRovingPhotoList
               photos={photos}
-              onClick={(photo) => setSelectedPhoto(photo)}
+              onClick={(photo) => setSelectedPhoto(photo)} //then display remaining photos
             />
           </div>
         ) : null}
-
-        {/* 
-        <ul>
-          {photoList.map((photo) => (
-            <li>
-              <img src={photo.img_src} />
-            </li>
-          ))}
-        </ul> */}
       </>
     );
   } else {
