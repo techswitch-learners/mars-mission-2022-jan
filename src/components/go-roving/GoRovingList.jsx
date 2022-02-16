@@ -1,14 +1,14 @@
-import react from "react";
+import React from "react";
 import { GoRovingRover } from "./GoRovingRover";
 
 export function GoRovingList({ rovers }) {
   return (
-    <div className="rover-list">
+    <ul className="rover-list">
       {rovers.map((rover, index) => (
-        <div className="rover" key={index}>
+        <li className="rover-list-item" key={index}>
           <GoRovingRover rover={rover} />
-        </div>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }

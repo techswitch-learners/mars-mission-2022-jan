@@ -23,9 +23,10 @@ img.rover-image {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  list-style: none;
 }
 
-.rover {
+.rover-list-item {
   flex-grow: 1;
   align-self: end;
   position: relative;
