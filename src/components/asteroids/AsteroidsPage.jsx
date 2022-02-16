@@ -1,10 +1,10 @@
 import React from "react";
-import { AsteroidDisplay } from "../asteroid-display/AsteroidDisplay";
+import { AsteroidsDisplay } from "../asteroidsDisplay/AsteroidsDisplay";
 
 export function AsteroidsPage() {
   return (
     <main>
-      <AsteroidDisplay />
+      <AsteroidsDisplay />
     </main>
   );
 }

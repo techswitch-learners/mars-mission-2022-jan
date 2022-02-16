@@ -1,6 +1,6 @@
 import React from "react";
 
-export function AsteroidDisplay() {
+export function AsteroidsDisplay() {
   return (
     <div className="asteroid-display-content">
       <img

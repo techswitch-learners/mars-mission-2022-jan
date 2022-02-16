@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
-import { AsteroidDisplay } from "./AsteroidDisplay";
+import { AsteroidsDisplay } from "./AsteroidsDisplay";
 
 test("displays component", () => {
-  render(<AsteroidDisplay />);
+  render(<AsteroidsDisplay />);
 });
