@@ -1,9 +1,14 @@
-export function GoRovingPhotoList({ photos }) {
+export function GoRovingPhotoList({ photos, onClick }) {
   return (
     <ul>
-      <li>
+      <li className=".go-roving-photo-list_container">
         {photos.map((photo) => (
-          <img src={photo.img_src} alt="Photo from camera" />
+          <img
+            key={photo.id}
+            src={photo.img_src}
+            alt=""
+            onClick={() => onClick(photo)}
+          />
         ))}
       </li>
     </ul>

@@ -32,7 +32,10 @@ export function GoRovingPhotosPage() {
             <h>👆Selected Photo</h>
 
             <h>👇Go Roving Photo List</h>
-            <GoRovingPhotoList photos={photos} selected={selectedPhoto} />
+            <GoRovingPhotoList
+              photos={photos}
+              onClick={(photo) => setSelectedPhoto(photo)}
+            />
           </div>
         ) : null}
 
