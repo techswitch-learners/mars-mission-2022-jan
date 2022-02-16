@@ -31,8 +31,6 @@ const interestingFacts = [
 ];
 
 function getInterestingFact() {
-  let interestingFact;
-
   const selection = Math.floor(Math.random() * interestingFacts.length);
 
   return interestingFacts[selection];
