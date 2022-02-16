@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getPictureOfTheDay } from "../../../clients/potdClient";
+import { getPotdData } from "../../../clients/potdClient";
 
 export function PictureOfTheDay() {
   const [imageUrl, setImageUrl] = useState();
@@ -7,7 +7,7 @@ export function PictureOfTheDay() {
   const [imageCaption, setImageCaption] = useState();
 
   useEffect(function () {
-    getPictureOfTheDay().then((potd) => {
+    getPotdData().then((potd) => {
       setImageUrl(potd.url);
       setImageTitle(potd.title);
       setImageCaption(potd.explanation);
