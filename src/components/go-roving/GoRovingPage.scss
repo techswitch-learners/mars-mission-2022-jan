@@ -32,7 +32,7 @@ img.rover-image {
   box-sizing: border-box;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 600px) and (max-width: 899px) {
   .rover {
     width: calc(95% / 2);
     margin-top: 5rem;
