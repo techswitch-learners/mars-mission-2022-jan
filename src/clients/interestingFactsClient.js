@@ -30,10 +30,8 @@ const interestingFacts = [
      mass wouldn’t even equal 10 percent of the mass of Earth’s Moon.`,
 ];
 
-function getInterestingFact() {
+export function getInterestingFact() {
   const selection = Math.floor(Math.random() * interestingFacts.length);
 
   return interestingFacts[selection];
 }
-
-export let fact = getInterestingFact();

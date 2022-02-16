@@ -1,11 +1,11 @@
 import React from "react";
-import { fact } from "../../../clients/interestingFactsClient";
+import { getInterestingFact } from "../../../clients/interestingFactsClient";
 
 export function InterestingFact() {
   return (
     <section>
       <h1>💡 Did you know...? 🪐🌌</h1>
-      <p>{fact}</p>
+      <p>{getInterestingFact()}</p>
     </section>
   );
 }
