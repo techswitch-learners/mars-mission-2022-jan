@@ -4,6 +4,7 @@ import { GoRovingPage } from "../go-roving/GoRovingPage";
 import { Navbar } from "../navbar/Navbar";
 import "./App.scss";
 import { GoRovingPhotosPage } from "../go-roving/goRovingPhotos/GoRovingPhotosPage";
+import { NeoPage } from "../asteroids/NeoPage/NeoPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/go-roving" element={<GoRovingPage />} />
         <Route path="/go-roving/:roverName" element={<GoRovingPhotosPage />} />
+        <Route path="/asteroids" element={<NeoPage />} />
       </Routes>
     </BrowserRouter>
   );
