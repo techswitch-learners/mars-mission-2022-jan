@@ -3,7 +3,7 @@ import { Homepage } from "../homepage/Homepage";
 import { GoRovingPage } from "../go-roving/GoRovingPage";
 import { Navbar } from "../navbar/Navbar";
 import "./App.scss";
-import { AsteroidsPage } from "../asteroids/AsteroidsPage";
+import { AsteroidsPage } from "../asteroids/AsteroidsPage/AsteroidsPage";
 
 function App() {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import { AsteroidsDisplay } from "../asteroidsDisplay/AsteroidsDisplay";
+import { AsteroidsDisplay } from "../AsteroidsDisplay/AsteroidsDisplay";
 
 export function AsteroidsPage() {
   return (
