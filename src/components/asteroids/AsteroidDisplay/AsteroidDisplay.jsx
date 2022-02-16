@@ -1,6 +1,6 @@
 import React from "react";
 
-export function AsteroidsDisplay() {
+export function AsteroidDisplay() {
   return (
     <section>
       <div className="asteroid-display-content"></div>
