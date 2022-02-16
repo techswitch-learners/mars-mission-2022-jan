@@ -17,3 +17,38 @@ img.rover-image {
   width: 48vw;
   height: 48vw;
 }
+
+.rover-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.rover {
+  flex-grow: 1;
+  align-self: end;
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 600px) {
+  .rover {
+    width: calc(95% / 2);
+    margin-top: 5rem;
+  }
+  .rover-image {
+    width: 38vw;
+    height: 38vw;
+  }
+}
+
+@media (min-width: 900px) {
+  .rover {
+    width: calc(95% / 3);
+  }
+  .rover-image {
+    width: 28vw;
+    height: 28vw;
+  }
+}
