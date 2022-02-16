@@ -1,5 +1,5 @@
 import { PictureOfTheDay } from "./pictureOfTheDay/PictureOfTheDay";
-import { InterestingFact } from "./interestingFacts/InterestingFacts";
+import { InterestingFact } from "./interestingFact/InterestingFact";
 import React from "react";
 
 export const Homepage = () => {

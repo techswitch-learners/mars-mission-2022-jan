@@ -1,5 +1,5 @@
 import React from "react";
-import { getInterestingFact } from "../../../clients/interestingFactsClient";
+import { getInterestingFact } from "../../../clients/interestingFactClient";
 
 export function InterestingFact() {
   return (

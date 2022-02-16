@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { InterestingFact } from "./InterestingFacts";
+import { InterestingFact } from "./InterestingFact";
 
 test("interesting fact renders without error", () => {
   render(<InterestingFact />);
