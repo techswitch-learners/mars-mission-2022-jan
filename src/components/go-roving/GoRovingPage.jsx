@@ -26,7 +26,7 @@ export const GoRovingPage = () => {
       <Link to="/go-roving/spirit">
         <img
           className="rover-image"
-          src="https://www.spaceflightinsider.com/wp-content/uploads/2015/01/Mars-Exploration-Rover-Spirit-Opportunity-surface-of-Red-Planet-NASA-image-posted-on-SpaceFlight-Insider-300x240.jpg"
+          src="http://searchoflife.com/wp-content/uploads/2014/06/mars-spirit-rover.jpg"
           alt="Spirit Rover"
         />
       </Link>
