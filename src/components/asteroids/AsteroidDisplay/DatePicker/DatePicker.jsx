@@ -8,28 +8,41 @@ export function DatePicker() {
     getAsteroids(fromDate, toDate)
   );
 
+  let asteroidCount;
+  if (!asteroidData) {
+    asteroidCount = "Loading asteroids...";
+  } else {
+    asteroidCount = asteroidData.element_count;
+  }
+
   return (
-    <main>
+    <section>
       <form
-        onSubmit={(e) => {
+        onSubmit={async (e) => {
           e.preventDefault();
-          setAsteroidData(getAsteroids(fromDate, toDate));
+          setAsteroidData(await getAsteroids(fromDate, toDate));
         }}
       >
-        <label htmlFor="fromDate" onChange={(e) => setFromDate(e.target.value)}>
-          from:
-        </label>
-        <input type="date" id="fromDate" />
+        <label htmlFor="fromDate">from:</label>
+        <input
+          type="date"
+          id="fromDate"
+          value={fromDate}
+          onChange={(e) => setFromDate(e.target.value)}
+        />
 
-        <label htmlFor="toDate" onChange={(e) => setToDate(e.target.value)}>
-          to:
-        </label>
-        <input type="date" id="toDate" />
+        <label htmlFor="toDate">to:</label>
+        <input
+          type="date"
+          id="toDate"
+          value={toDate}
+          onChange={(e) => setToDate(e.target.value)}
+        />
+        <input type="submit" />
       </form>
       <div className="asteroid-info">
-        <h2>Number of asteroids near earth:</h2>
-        <p>{asteroidData.nearEarthObjects.length}</p>
+        <h2>Number of asteroids near earth: {asteroidCount} </h2>
       </div>
-    </main>
+    </section>
   );
 }
