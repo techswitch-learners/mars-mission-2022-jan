@@ -7,11 +7,7 @@ test("picture of the day renders without error", () => {
 });
 
 test("picture of the day shows title", () => {
-  render(
-    <Homepage>
-      <PictureOfTheDay />
-    </Homepage>
-  );
+  render(<PictureOfTheDay />);
   const titleElements = screen.getAllByText(
     /NASA Astronomy Picture of the Day:/i
   );
