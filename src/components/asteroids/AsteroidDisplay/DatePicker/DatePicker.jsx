@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getAsteroids } from "../../../../clients/asteroidClient";
 import { getDateOfWeek } from "../../../../helperFunctions/dateConverter";
+import ClipLoader from "react-spinners/ClipLoader";
 
 export function DatePicker() {
   const [date, setDate] = useState("2022-W05");
@@ -56,6 +57,7 @@ export function DatePicker() {
           <p>Error: {error.message}</p>
         )}
       </div>
+      <ClipLoader loading={loading} size={150} color={"#c0844f"} />
     </section>
   );
 }
