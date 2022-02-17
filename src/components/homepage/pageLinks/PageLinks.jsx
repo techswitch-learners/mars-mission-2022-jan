@@ -17,16 +17,20 @@ export function PageLinks() {
     <section>
       <h1>Explore More...</h1>
       <div>
-        <figcaption>Picture from Rover</figcaption>
+        <figcaption>
+          Go Roving! Pick a rover and explore Mars for yourself!
+        </figcaption>
         <Link to="/go-roving">
           <img src={imageUrl} />
         </Link>
       </div>
       <div>
+        <figcaption>
+          Click here to see how many asteroids are near Earth!
+        </figcaption>
         <Link to="/asteroids">
           <img src="https://images.newscientist.com/wp-content/uploads/2020/06/04160433/r4500292-comet_ikeya-zhang_andromeda_galaxy_optical_web.jpg" />
         </Link>
-        <figcaption></figcaption>
       </div>
     </section>
   );
