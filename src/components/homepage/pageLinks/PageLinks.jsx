@@ -1,15 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { getRoverPhotos } from "../../../clients/marsPhotosClient";
+import { useState, useEffect } from "react";
 
 export function PageLinks() {
+  const [imageUrl, setImageUrl] = useState();
+
+  useEffect(function () {
+    getRoverPhotos("curiosity", 1004).then((photos) => {
+      setImageUrl(photos[0].img_src);
+    });
+  }, []);
+
   return (
     <section>
       <h1>Explore More...</h1>
       <div>
+        <figcaption>Picture from Rover</figcaption>
         <Link to="/go-roving">
-          <img src="https://www.issnationallab.org/wp-content/uploads/2018/05/opportunity-rover-square.jpg" />
+          <img src={imageUrl} />
         </Link>
-        <figcaption></figcaption>
       </div>
       <div>
         <Link to="/asteroids">
