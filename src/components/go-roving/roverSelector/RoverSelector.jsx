@@ -3,11 +3,10 @@ import { setRoverData } from "../roverData/roverData";
 import { GoRovingRover } from "../GoRovingRover";
 import "./RoverSelector.scss";
 
-export function RoverSelector(props) {
+export function RoverSelector({ roverName }) {
   const rovers = setRoverData();
-  console.log(props.roverName);
   const filteredRovers = rovers.filter(
-    (rover) => rover.name.toLowerCase() !== props.roverName.toLowerCase()
+    (rover) => rover.name.toLowerCase() !== roverName?.toLowerCase()
   );
 
   return (
