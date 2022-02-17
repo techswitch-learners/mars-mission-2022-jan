@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getPotdData } from "../../../clients/potdClient";
 import ReactPlayer from "react-player/youtube";
+import "./../homepage.scss";
 
 export function PictureOfTheDay() {
   const [imageUrl, setImageUrl] = useState();
@@ -18,7 +19,7 @@ export function PictureOfTheDay() {
   }, []);
 
   return (
-    <section>
+    <section className="container-potd">
       <h1>NASA Astronomy Picture of the Day: {imageTitle}</h1>
 
       {imageType === "video" && (
@@ -27,7 +28,7 @@ export function PictureOfTheDay() {
         </p>
       )}
 
-      {imageType === "image" && <img src={imageUrl}></img>}
+      {imageType === "image" && <img className="potd" src={imageUrl}></img>}
 
       <figcaption>{imageCaption}</figcaption>
     </section>

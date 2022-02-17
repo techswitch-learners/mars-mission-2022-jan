@@ -1,0 +1,51 @@
+.container-potd {
+  display: flex;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.3fr 1fr 1fr;
+  gap: 1px 1px;
+  border: 2px solid red;
+}
+
+.potd,
+.img-link {
+  object-fit: contain;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+figcaption,
+p {
+  text-align: justify;
+}
+
+.container-links {
+  display: flex;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.1fr 1fr;
+  gap: 15px;
+  border: 2px solid red;
+}
+
+#links-title {
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+.img-link {
+  grid-area: 3 / 1 / 2 / 3;
+}
+
+.img-link-caption {
+  grid-area: 2 / 1 / 2 / 3;
+}
+
+#img-link-asteroid {
+  height: 100%;
+  grid-area: 3 / 1 / 2;
+}
