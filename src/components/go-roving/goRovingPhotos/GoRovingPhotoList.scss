@@ -1,0 +1,26 @@
+.image-selector {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70vw;
+  margin: auto;
+  gap: 15px;
+  box-sizing: border-box;
+}
+
+.image-selector__thumbnail img {
+  width: calc(70vw / 4 - 25px);
+  border: none;
+  margin: 5px;
+  border-radius: 1rem;
+}
+
+.image-selector__thumbnail.selected img {
+  border: 10px solid #c0844f;
+  border-radius: 1rem;
+  margin: 0;
+  opacity: 50%;
+}
+h2 {
+  text-align: center;
+  padding: 1.5rem;
+}
