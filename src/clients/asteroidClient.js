@@ -4,7 +4,7 @@ export async function getAsteroids(startDate, endDate) {
   const asteroids = await data.json();
 
   if (!data.ok) {
-    throw new Error("Dates must be within a week of each other");
+    throw new Error(asteroids.error_message);
   }
 
   return asteroids;
