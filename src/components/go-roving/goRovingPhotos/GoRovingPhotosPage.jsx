@@ -8,7 +8,7 @@ export function GoRovingPhotosPage() {
   const [photos, setPhotos] = useState();
   const [selectedPhoto, setSelectedPhoto] = useState();
   const params = useParams();
-  const sol = 1900;
+  const sol = 200;
   const [searchParams] = useSearchParams(); // for use next/prev
   const pageNumber = Number(searchParams.get("page") || "1"); //default to page 1
 
@@ -47,7 +47,9 @@ export function GoRovingPhotosPage() {
           {pageNumber > 1 ? (
             <Link to={`?page=${pageNumber - 1}`}> ⏪Previous </Link>
           ) : null}
-          <Link to={`?page=${pageNumber + 1}`}>Next ⏩</Link>
+          {photos.length ? (
+            <Link to={`?page=${pageNumber + 1}`}>Next ⏩</Link>
+          ) : null}
         </div>
         {photos.length ? (
           <GoRovingPhotoList
