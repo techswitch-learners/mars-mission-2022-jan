@@ -1,12 +1,14 @@
 .rover-selector-list {
   position: absolute;
   right: 5px;
+  top: 5px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-end;
   list-style: none;
   padding-inline-start: 0;
+  margin: 0;
 }
 
 .rover-selector-list-item {
@@ -27,6 +29,7 @@
   }
   h2 {
     font-size: 10px;
+    margin: 0;
   }
 }
 

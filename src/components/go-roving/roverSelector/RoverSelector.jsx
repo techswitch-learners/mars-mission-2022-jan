@@ -1,10 +1,9 @@
 import React from "react";
-import { setRoverData } from "../roverData/roverData";
+import { rovers } from "../roverData/roverData";
 import { GoRovingRover } from "../GoRovingRover";
 import "./RoverSelector.scss";
 
 export function RoverSelector({ roverName }) {
-  const rovers = setRoverData();
   const filteredRovers = rovers.filter(
     (rover) => rover.name.toLowerCase() !== roverName?.toLowerCase()
   );
