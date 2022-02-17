@@ -29,7 +29,7 @@ export function AsteroidDisplay() {
   return (
     <section>
       <div className="asteroid-display-content"></div>
-      <DatePicker date={date} setDate={setDate} />
+      <DatePicker date={date} setDate={setDate} loading={loading} />
       {loading ? (
         "Loading asteroids for " + date + "..."
       ) : (

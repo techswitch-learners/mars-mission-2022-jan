@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 
-export function DatePicker({ date, setDate }) {
+export function DatePicker({ date, setDate, loading }) {
   const [dateValue, setDateValue] = useState("2022-02-01");
+
   return (
     <section>
       <form
@@ -19,7 +20,7 @@ export function DatePicker({ date, setDate }) {
             setDateValue(e.target.value);
           }}
         />
-        <input type="submit" />
+        <input type="submit" disabled={loading} />
       </form>
     </section>
   );
