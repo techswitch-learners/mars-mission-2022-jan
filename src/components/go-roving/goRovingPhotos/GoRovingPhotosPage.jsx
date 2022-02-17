@@ -34,9 +34,8 @@ export function GoRovingPhotosPage() {
       <>
         {photos.length ? (
           <div>
-            <h1>
-              Page {pageNumber} of Photos taken from {photos[0].rover.name}{" "}
-            </h1>
+            <h1>Photos taken from {photos[0].rover.name} </h1>
+            <p> Page: {pageNumber} </p>
             {selectedPhoto ? (
               <GoRovingPhoto photo={selectedPhoto} /> //first photo as the main photo
             ) : (
