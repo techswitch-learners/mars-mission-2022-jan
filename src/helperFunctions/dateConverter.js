@@ -1,0 +1,7 @@
+export function getDateOfWeek(week) {
+  const y = week.split("-")[0];
+  const w = week.split("W")[1];
+  const d = 1 + (w - 1) * 7; // 1st of January + 7 days for each week
+
+  return new Date(y, 0, d).toISOString();
+}

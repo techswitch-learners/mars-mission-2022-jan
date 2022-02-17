@@ -1,28 +1,28 @@
 import React, { useEffect, useState } from "react";
 import { getAsteroids } from "../../../../clients/asteroidClient";
+import { getDateOfWeek } from "../../../../helperFunctions/dateConverter";
 
 export function DatePicker() {
-  const [fromDate, setFromDate] = useState("2022-02-01");
-  const [toDate, setToDate] = useState("2022-02-07");
+  const [date, setDate] = useState("2022-W05");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState();
   const [asteroidData, setAsteroidData] = useState();
 
   useEffect(
     function () {
+      const formattedDate = getDateOfWeek(date);
       setLoading(true);
       setError(undefined);
-      getAsteroids(fromDate, toDate)
+      getAsteroids(formattedDate)
         .then((asteroid) => {
           setAsteroidData(asteroid);
           setLoading(false);
         })
         .catch((reason) => {
           setError(reason);
-          console.log(reason.message);
         });
     },
-    [fromDate, toDate]
+    [date]
   );
 
   return (
@@ -35,22 +35,16 @@ export function DatePicker() {
       //   setLoading(false);
       // }}
       >
-        <label htmlFor="fromDate">from:</label>
+        <label htmlFor="date">date:</label>
         <input
-          type="date"
-          id="fromDate"
-          value={fromDate}
-          onChange={(e) => setFromDate(e.target.value)}
+          type="week"
+          id="date"
+          value={date}
+          onChange={(e) => {
+            setDate(e.target.value);
+            console.log(date);
+          }}
         />
-
-        <label htmlFor="toDate">to:</label>
-        <input
-          type="date"
-          id="toDate"
-          value={toDate}
-          onChange={(e) => setToDate(e.target.value)}
-        />
-        {/* <input type="submit" /> */}
       </form>
       <div className="asteroid-info">
         {!error ? (
