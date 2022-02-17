@@ -30,7 +30,16 @@ export function AsteroidDisplay() {
     <section>
       <div className="asteroid-display-content"></div>
       <DatePicker date={date} setDate={setDate} />
-      <Asteroid loading={loading} error={error} asteroidData={asteroidData} />
+      {loading ? (
+        "Loading asteroids for " + date + "..."
+      ) : (
+        <Asteroid
+          loading={loading}
+          error={error}
+          asteroidData={asteroidData}
+          date={date}
+        />
+      )}
       <ClipLoader loading={loading} size={150} color={"#c0844f"} />
       <div className="image">
         <img

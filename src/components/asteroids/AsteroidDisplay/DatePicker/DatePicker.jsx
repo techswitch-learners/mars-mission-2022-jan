@@ -1,19 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 
 export function DatePicker({ date, setDate }) {
+  const [dateValue, setDateValue] = useState("2022-02-01");
   return (
     <section>
-      <form>
-        <label htmlFor="date">date:</label>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          console.log(e.target.firstChild.value);
+          setDate(e.target.firstChild.value);
+        }}
+      >
         <input
           type="date"
           id="date"
-          value={date}
+          value={dateValue}
           onChange={(e) => {
-            setDate(e.target.value);
-            console.log(date);
+            setDateValue(e.target.value);
           }}
         />
+        <input type="submit" />
       </form>
     </section>
   );
