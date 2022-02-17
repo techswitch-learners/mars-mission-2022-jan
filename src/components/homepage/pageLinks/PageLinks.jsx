@@ -8,7 +8,8 @@ export function PageLinks() {
 
   useEffect(function () {
     getRoverPhotos("curiosity", 1004).then((photos) => {
-      setImageUrl(photos[0].img_src);
+      const index = Math.floor(Math.random() * photos.length);
+      setImageUrl(photos[index].img_src);
     });
   }, []);
 
