@@ -21,7 +21,7 @@ export function PageLinks() {
           Go Roving! Pick a rover and explore Mars for yourself!
         </figcaption>
         <Link to="/go-roving">
-          <img src={imageUrl} />
+          <img src={imageUrl} alt="Mars rover photo" alt="rover" />
         </Link>
       </div>
       <div>
