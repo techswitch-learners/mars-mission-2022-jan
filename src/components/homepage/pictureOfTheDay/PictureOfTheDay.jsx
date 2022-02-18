@@ -21,16 +21,16 @@ export function PictureOfTheDay() {
   return (
     <section className="container-potd">
       <h1>NASA Astronomy Picture of the Day: {imageTitle}</h1>
-      <figure>
+      <figure className="figure-potd">
         {imageType === "video" && (
           <p>
             <ReactPlayer url={imageUrl} />
           </p>
         )}
 
-        {imageType === "image" && <img src={imageUrl}></img>}
+        {imageType === "image" && <img src={imageUrl} className="potd"></img>}
 
-        <figcaption>{imageCaption}</figcaption>
+        <figcaption id="potd-caption">{imageCaption}</figcaption>
       </figure>
     </section>
   );
