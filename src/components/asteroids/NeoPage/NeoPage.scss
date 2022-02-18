@@ -1,7 +1,7 @@
 @import "../../../constants.scss";
 
 .asteroid-info {
-  border: 7px solid #c0844f;
+  border: 7px solid $primary-colour;
   border-radius: 15px;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
@@ -23,7 +23,7 @@ form {
 }
 
 .image {
-  border: 7px solid #c0844f;
+  border: 7px solid $primary-colour;
   border-radius: 15px;
   overflow: hidden;
   height: 50vh;
