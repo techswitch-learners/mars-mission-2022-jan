@@ -4,15 +4,15 @@ import { getVelocityByFormulaOneCar } from "../../../helperFunctions/converterFu
 import { getDistanceFromEarthByShard } from "../../../helperFunctions/converterFunctions";
 
 export function Asteroid({ asteroidData, date }) {
-  const diameterInMeters = getDiameterInFootballPitches(
+  const diameterInFootballPitches = getDiameterInFootballPitches(
     asteroidData.near_earth_objects[[date]][0].estimated_diameter.kilometers
       .estimated_diameter_max
   );
-  const velocityByMeter = getVelocityByFormulaOneCar(
+  const VelocityByFormulaOneCar = getVelocityByFormulaOneCar(
     asteroidData.near_earth_objects[[date]][0].close_approach_data[0]
       .relative_velocity.kilometers_per_second
   );
-  const distanceInKm = getDistanceFromEarthByShard(
+  const dDistanceFromEarthByShard = getDistanceFromEarthByShard(
     asteroidData.near_earth_objects[[date]][0].close_approach_data[0]
       .miss_distance.kilometers
   );
@@ -29,17 +29,17 @@ export function Asteroid({ asteroidData, date }) {
           <p>Nearest Asteroid is ...</p>
 
           <p>
-            {diameterInMeters + " "}
+            {diameterInFootballPitches + " "}
             football pitches wide!
           </p>
           <p>
             Travelling
-            {" " + velocityByMeter + " "}
+            {" " + VelocityByFormulaOneCar + " "}
             times faster than a formula1 car!
           </p>
           <p>
             Stack up the Shard
-            {" " + distanceInKm + " "}
+            {" " + DistanceFromEarthByShard + " "}
             times! That's how far away it is.
           </p>
         </>
