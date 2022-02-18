@@ -3,6 +3,7 @@ import { getRoverPhotos } from "../../../clients/marsPhotosClient";
 import { useParams, Link, useSearchParams } from "react-router-dom";
 import { GoRovingPhoto } from "./GoRovingPhoto";
 import { GoRovingPhotoList } from "./GoRovingPhotoList";
+import { RoverSelector } from "../roverSelector/RoverSelector";
 import "./GoRovingPhotosPage.scss";
 
 export function GoRovingPhotosPage() {
@@ -26,7 +27,7 @@ export function GoRovingPhotosPage() {
       }
       fetchAndSetPhotos();
     },
-    [pageNumber]
+    [pageNumber, params.roverName]
   );
 
   let listPhotos;
@@ -74,5 +75,10 @@ export function GoRovingPhotosPage() {
     listPhotos = <p>Loading photos...</p>;
   }
 
-  return <main>{listPhotos}</main>;
+  return (
+    <main>
+      <RoverSelector roverName={params.roverName} />
+      {listPhotos}
+    </main>
+  );
 }
