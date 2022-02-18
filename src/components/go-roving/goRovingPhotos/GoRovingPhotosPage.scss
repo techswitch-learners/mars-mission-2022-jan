@@ -1,0 +1,25 @@
+@import "../../../constants.scss";
+a.prevNext {
+  margin: auto;
+  text-align: center;
+  text-decoration: none;
+  font-size: larger;
+  color: white;
+  padding: 0 1rem;
+
+  &:hover {
+    background-color: $primary-colour;
+    text-transform: capitalize;
+  }
+}
+h1 {
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 5vw;
+}
+
+@media (min-width: 900px) {
+  h1 {
+    font-size: 3vw;
+  }
+}

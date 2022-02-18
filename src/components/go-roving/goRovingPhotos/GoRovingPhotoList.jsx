@@ -1,19 +1,19 @@
 import "./GoRovingPhotoList.scss";
 
-export function GoRovingPhotoList({ photos, onClick, selectedPhoto }) {
+export function GoRovingPhotoList({ photos, onClick, photo }) {
   return (
     <div className="image-selector">
-      {photos.map((photo) => (
+      {photos.map((pic) => (
         <div
           className={`image-selector__thumbnail ${
-            selectedPhoto === photo ? "selected" : ""
+            photo === pic ? "selected" : ""
           }`}
         >
           <img
-            key={photo.id}
-            src={photo.img_src}
+            key={pic.id}
+            src={pic.img_src}
             alt=""
-            onClick={() => onClick(photo)}
+            onClick={() => onClick(pic)}
           />
         </div>
       ))}

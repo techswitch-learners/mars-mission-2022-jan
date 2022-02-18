@@ -3,12 +3,13 @@ import { getRoverPhotos } from "../../../clients/marsPhotosClient";
 import { useParams, Link, useSearchParams } from "react-router-dom";
 import { GoRovingPhoto } from "./GoRovingPhoto";
 import { GoRovingPhotoList } from "./GoRovingPhotoList";
+import "./GoRovingPhotosPage.scss";
 
 export function GoRovingPhotosPage() {
   const [photos, setPhotos] = useState();
   const [selectedPhoto, setSelectedPhoto] = useState();
   const params = useParams();
-  const sol = 1900;
+  const sol = 200;
   const [searchParams] = useSearchParams(); // for use next/prev
   const pageNumber = Number(searchParams.get("page") || "1"); //default to page 1
 
@@ -35,9 +36,9 @@ export function GoRovingPhotosPage() {
         {photos.length ? (
           <div>
             <h1>Photos taken from {photos[0].rover.name} </h1>
-            <p> Page: {pageNumber} </p>
+
             {selectedPhoto ? (
-              <GoRovingPhoto photo={selectedPhoto} /> //first photo as the main photo
+              <GoRovingPhoto photo={selectedPhoto} />
             ) : (
               <h2> No photos selected </h2>
             )}
@@ -45,14 +46,26 @@ export function GoRovingPhotosPage() {
         ) : null}
         <div>
           {pageNumber > 1 ? (
-            <Link to={`?page=${pageNumber - 1}`}> ⏪Previous </Link>
+            <Link className="prevNext" to={`?page=${pageNumber - 1}`}>
+              {" "}
+              ⬅ Previous{" "}
+            </Link>
           ) : null}
-          <Link to={`?page=${pageNumber + 1}`}>Next ⏩</Link>
+          {photos.length ? (
+            <Link className="prevNext" to={`?page=${pageNumber + 1}`}>
+              Next ➡{" "}
+            </Link>
+          ) : (
+            <p> No more photos to display </p>
+          )}
+          <p> Page: {pageNumber} </p>
         </div>
+
         {photos.length ? (
           <GoRovingPhotoList
             photos={photos}
-            onClick={(photo) => setSelectedPhoto(photo)} //then display remaining photos
+            photo={selectedPhoto}
+            onClick={(photo) => setSelectedPhoto(photo)}
           />
         ) : null}
       </>
