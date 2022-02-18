@@ -1,0 +1,143 @@
+.container-potd {
+  display: flex;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 1fr;
+  gap: 1px 1px;
+}
+
+.potd,
+.img-link,
+figure {
+  object-fit: contain;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+figcaption,
+p {
+  text-align: justify;
+}
+
+.figure-potd {
+  grid-area: 2 / 1 / 3 / 2;
+  align-items: center;
+  justify-content: center;
+}
+
+figure {
+  margin: 0;
+}
+
+.page-link-fig {
+  margin-bottom: 20px;
+}
+
+#potd-caption {
+  object-fit: contain;
+  height: 100%;
+}
+
+.interesting-fact {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  main {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+  .container-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr;
+    gap: 1px 1px;
+    grid-template-areas:
+      "page-link-title page-link-title"
+      "page-link-fig-1 page-link-fig-2";
+  }
+
+  .page-link-fig {
+    width: calc((100%-10px) / 1.5);
+    margin-left: 1.5em;
+  }
+
+  #page-link-fig-1 {
+    grid-area: "page-link-fig-1";
+  }
+
+  #page-link-fig-2 {
+    grid-area: "page-link-fig-2";
+    object-fit: fill;
+  }
+
+  .page-link-title {
+    grid-area: 1 / 1 / 2 / 3;
+    padding: 20px;
+  }
+
+  .interesting-fact {
+    margin-top: 2em;
+  }
+
+  .img-link {
+    object-fit: cover;
+    height: 325px;
+    width: 309px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1500px) {
+  main {
+    margin-left: 10em;
+    margin-right: 10em;
+  }
+
+  .container-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr;
+    gap: 1px 25px;
+    grid-template-areas:
+      "page-link-title page-link-title"
+      "page-link-fig-1 page-link-fig-2";
+  }
+
+  .page-link-fig {
+    margin-left: 0.3;
+  }
+
+  #page-link-fig-1 {
+    grid-area: "page-link-fig-1";
+  }
+
+  #page-link-fig-2 {
+    grid-area: "page-link-fig-2";
+    height: 100%;
+  }
+
+  .page-link-title {
+    grid-area: 1 / 1 / 2 / 3;
+    padding: 20px;
+  }
+
+  .interesting-fact {
+    margin-top: 2.5em;
+  }
+
+  .img-link {
+    object-fit: cover;
+    height: 325px;
+    width: 456px;
+  }
+
+  .caption-link {
+    align-self: center;
+    padding: 1em;
+  }
+}

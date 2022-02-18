@@ -1,3 +1,4 @@
+import "./homepage.scss";
 import { PictureOfTheDay } from "./pictureOfTheDay/PictureOfTheDay";
 import { InterestingFact } from "./interestingFact/InterestingFact";
 import { PageLinks } from "./pageLinks/PageLinks";
