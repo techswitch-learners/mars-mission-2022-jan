@@ -38,7 +38,7 @@ span {
 }
 
 @media screen and (min-width: 600px) {
-  section {
+  .asteroid-grid {
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 2fr;
@@ -76,7 +76,7 @@ span {
   span {
     margin-left: -9em;
   }
-  section {
+  .asteroid-grid {
     grid-template-columns: 6fr 4fr;
   }
   form {
@@ -103,8 +103,9 @@ span {
     margin-top: 2em;
   }
 
-  .date-picker {
-    grid-template-rows: 1fr 3fr;
+  .asteroid-grid {
+    grid-template-columns: 5fr 4fr;
+    grid-template-rows: 1fr 6fr;
   }
 
   form {

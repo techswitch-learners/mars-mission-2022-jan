@@ -27,7 +27,7 @@ export function AsteroidDisplay() {
   );
 
   return (
-    <section>
+    <section className="asteroid-grid">
       <DatePicker date={date} setDate={setDate} loading={loading} />
       {loading ? (
         "Loading asteroids for " + date + "..."
