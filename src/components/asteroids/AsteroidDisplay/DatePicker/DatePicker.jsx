@@ -8,10 +8,10 @@ export function DatePicker({ date, setDate, loading }) {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          console.log(e.target.firstChild.value);
-          setDate(e.target.firstChild.value);
+          setDate(dateValue);
         }}
       >
+        <label htmlFor="date">Select a date: </label>
         <input
           type="date"
           id="date"
