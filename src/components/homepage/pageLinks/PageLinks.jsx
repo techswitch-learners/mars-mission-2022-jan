@@ -14,10 +14,10 @@ export function PageLinks() {
   }, []);
 
   return (
-    <section className="container-links">
-      <h1 id="links-title">Explore More...</h1>
-      <div>
-        <figcaption className="img-link-caption">
+    <section>
+      <h1>Explore More...</h1>
+      <figure>
+        <figcaption>
           Go Roving! Pick a rover and explore Mars for yourself!
         </figcaption>
         <Link to="/go-roving">
@@ -28,9 +28,9 @@ export function PageLinks() {
             className="img-link"
           />
         </Link>
-      </div>
-      <div>
-        <figcaption className="img-link-caption">
+      </figure>
+      <figure>
+        <figcaption>
           Click here to see how many asteroids are near Earth!
         </figcaption>
         <Link to="/asteroids">
@@ -40,7 +40,7 @@ export function PageLinks() {
             id="img-link-asteroid"
           />
         </Link>
-      </div>
+      </figure>
     </section>
   );
 }

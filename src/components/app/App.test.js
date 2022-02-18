@@ -1,9 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import App from "./App";
-import { createMemoryHistory } from "history";
-import { Router } from "react-router-dom";
-import "@testing-library/jest-dom";
 
 test("web page renders without error", () => {
   render(<App />);
