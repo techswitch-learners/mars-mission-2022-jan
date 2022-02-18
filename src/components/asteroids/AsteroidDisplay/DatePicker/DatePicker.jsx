@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export function DatePicker({ date, setDate, loading }) {
+export function DatePicker({ setDate, loading }) {
   const [dateValue, setDateValue] = useState("2022-02-01");
 
   return (
