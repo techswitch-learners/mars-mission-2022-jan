@@ -1,14 +1,12 @@
 .rover-selector-list {
   position: absolute;
-  right: 5px;
-  top: 5px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: flex-end;
   list-style: none;
   padding-inline-start: 0;
   margin: 0;
+  justify-content: space-between;
 }
 
 .rover-selector-list-item {
@@ -16,25 +14,46 @@
   align-self: end;
   position: relative;
   box-sizing: border-box;
-  padding: 1px;
+  width: 5em;
 }
 .rover-selector {
-  height: 10vw;
+  height: 25vw;
   width: 100%;
   position: relative;
 
   img {
-    width: 7vw;
-    height: 7vw;
-  }
-  h2 {
-    font-size: 10px;
-    margin: 0;
+    width: 10vw;
+    height: 10vw;
+    border-radius: 0.5rem;
   }
 }
 
-@media (min-width: 600px) {
+@media (max-width: 599px) {
   h2 {
-    font-size: 15px;
+    font-size: 3vw;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+  h2 {
+    font-size: 20px;
+  }
+  .rover-selector {
+    height: 18vw;
+  }
+  .rover-selector-list-item {
+    width: 8em;
+  }
+}
+
+@media (min-width: 900px) {
+  h2 {
+    font-size: 20px;
+  }
+  .rover-selector {
+    height: 15vw;
+  }
+  .rover-selector-list-item {
+    width: 10em;
   }
 }
