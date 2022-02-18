@@ -1,5 +1,13 @@
 @import "../../../constants.scss";
 
+.asteroid-info {
+  border: 7px solid #c0844f;
+  border-radius: 15px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+}
+
 h2 {
   text-align: left;
 }
@@ -15,11 +23,10 @@ form {
 }
 
 .image {
-  border: 2px solid grey;
+  border: 7px solid #c0844f;
   border-radius: 15px;
   overflow: hidden;
   height: 50vh;
-  width: 90vw;
 
   img {
     margin: -18em;
@@ -83,5 +90,9 @@ span {
     width: 90vw;
     height: 100vh;
     margin-left: 2em;
+  }
+
+  .asteroid-info {
+    margin-right: 3em;
   }
 }

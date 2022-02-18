@@ -22,10 +22,8 @@ export function Asteroid({ asteroidData, date }) {
       {!asteroidData.near_earth_objects[[date]] ? (
         "There are no asteroids for the chosen day!"
       ) : (
-        <>
-          <p>
-            {asteroidData.element_count} total asteroids near earth on {date}
-          </p>
+        <div className="asteroid-container">
+          <p>{asteroidData.element_count} total asteroids near earth:</p>
           <h2>Nearest Asteroid is ...</h2>
 
           <p>
@@ -42,7 +40,7 @@ export function Asteroid({ asteroidData, date }) {
             {" " + DistanceFromEarthByShard + " "}
             times! That's how far away it is.
           </p>
-        </>
+        </div>
       )}
     </div>
   );
