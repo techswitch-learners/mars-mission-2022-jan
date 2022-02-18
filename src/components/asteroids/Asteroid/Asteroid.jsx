@@ -8,10 +8,10 @@ export function Asteroid({ asteroidData, date }) {
         "There are no asteroids for the chosen day!"
       ) : (
         <>
-          <h4>
+          <p>
             {asteroidData.element_count} total asteroids near earth on {date}
-          </h4>
-          <h4>Nearest Asteroid = </h4>
+          </p>
+          <p>Nearest Asteroid = </p>
 
           <p>
             {
