@@ -1,5 +1,4 @@
 import { render, screen } from "@testing-library/react";
-import renderer from "react-test-renderer";
 import { GoRovingPhoto } from "./GoRovingPhoto";
 
 test("Camera full name is correct", () => {
