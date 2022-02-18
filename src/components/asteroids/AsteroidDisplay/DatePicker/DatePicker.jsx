@@ -1,48 +1,27 @@
 import React, { useState } from "react";
-import { getAsteroids } from "../../../../clients/asteroidClient";
 
-export function DatePicker() {
-  const [fromDate, setFromDate] = useState("2022-02-01");
-  const [toDate, setToDate] = useState("2022-02-07");
-  const [asteroidData, setAsteroidData] = useState(
-    getAsteroids(fromDate, toDate)
-  );
-
-  let asteroidCount;
-  if (!asteroidData) {
-    asteroidCount = "Loading asteroids...";
-  } else {
-    asteroidCount = asteroidData.element_count;
-  }
+export function DatePicker({ setDate, loading }) {
+  const [dateValue, setDateValue] = useState("2022-02-01");
 
   return (
     <section>
       <form
-        onSubmit={async (e) => {
+        onSubmit={(e) => {
           e.preventDefault();
-          setAsteroidData(await getAsteroids(fromDate, toDate));
+          setDate(dateValue);
         }}
       >
-        <label htmlFor="fromDate">from:</label>
+        <label htmlFor="date">Select a date: </label>
         <input
           type="date"
-          id="fromDate"
-          value={fromDate}
-          onChange={(e) => setFromDate(e.target.value)}
+          id="date"
+          value={dateValue}
+          onChange={(e) => {
+            setDateValue(e.target.value);
+          }}
         />
-
-        <label htmlFor="toDate">to:</label>
-        <input
-          type="date"
-          id="toDate"
-          value={toDate}
-          onChange={(e) => setToDate(e.target.value)}
-        />
-        <input type="submit" />
+        <input type="submit" disabled={loading} />
       </form>
-      <div className="asteroid-info">
-        <h2>Number of asteroids near earth: {asteroidCount} </h2>
-      </div>
     </section>
   );
 }
