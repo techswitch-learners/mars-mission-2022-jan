@@ -7,17 +7,17 @@
   padding-inline-start: 0;
   margin: 0;
   justify-content: space-between;
+  width: 100%;
 }
 
 .rover-selector-list-item {
-  flex-grow: 1;
   align-self: end;
   position: relative;
   box-sizing: border-box;
   width: 5em;
 }
 .rover-selector {
-  height: 25vw;
+  height: 20vw;
   width: 100%;
   position: relative;
 
@@ -51,7 +51,7 @@
     font-size: 20px;
   }
   .rover-selector {
-    height: 15vw;
+    height: 0;
   }
   .rover-selector-list-item {
     width: 10em;
