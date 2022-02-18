@@ -1,0 +1,16 @@
+.hero-pic img {
+  width: 55vw;
+  height: 55vw;
+  border: 7px solid #c0844f;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+@media (min-width: 900px) {
+  .hero-pic img {
+    width: 30vw;
+    height: 30vw;
+  }
+}
