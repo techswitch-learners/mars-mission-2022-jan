@@ -4,7 +4,7 @@ export function DatePicker({ setDate, loading }) {
   const [dateValue, setDateValue] = useState("2022-02-01");
 
   return (
-    <section>
+    <section className="date-picker">
       <form
         onSubmit={(e) => {
           e.preventDefault();

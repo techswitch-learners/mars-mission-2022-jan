@@ -11,7 +11,7 @@ export function Asteroid({ asteroidData, date }) {
           <p>
             {asteroidData.element_count} total asteroids near earth on {date}
           </p>
-          <p>Nearest Asteroid = </p>
+          <h2>Nearest Asteroid:</h2>
 
           <p>
             {
