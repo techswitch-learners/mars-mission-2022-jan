@@ -12,7 +12,7 @@ export function Asteroid({ asteroidData, date }) {
     asteroidData.near_earth_objects[[date]][0].close_approach_data[0]
       .relative_velocity.kilometers_per_second
   );
-  const dDistanceFromEarthByShard = getDistanceFromEarthByShard(
+  const DistanceFromEarthByShard = getDistanceFromEarthByShard(
     asteroidData.near_earth_objects[[date]][0].close_approach_data[0]
       .miss_distance.kilometers
   );
@@ -26,7 +26,7 @@ export function Asteroid({ asteroidData, date }) {
           <p>
             {asteroidData.element_count} total asteroids near earth on {date}
           </p>
-          <p>Nearest Asteroid is ...</p>
+          <h2>Nearest Asteroid is ...</h2>
 
           <p>
             {diameterInFootballPitches + " "}
