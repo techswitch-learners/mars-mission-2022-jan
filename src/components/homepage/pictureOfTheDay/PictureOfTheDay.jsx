@@ -20,16 +20,17 @@ export function PictureOfTheDay() {
   return (
     <section>
       <h1>NASA Astronomy Picture of the Day: {imageTitle}</h1>
+      <figure>
+        {imageType === "video" && (
+          <p>
+            <ReactPlayer url={imageUrl} />
+          </p>
+        )}
 
-      {imageType === "video" && (
-        <p>
-          <ReactPlayer url={imageUrl} />
-        </p>
-      )}
+        {imageType === "image" && <img src={imageUrl}></img>}
 
-      {imageType === "image" && <img src={imageUrl}></img>}
-
-      <figcaption>{imageCaption}</figcaption>
+        <figcaption>{imageCaption}</figcaption>
+      </figure>
     </section>
   );
 }
