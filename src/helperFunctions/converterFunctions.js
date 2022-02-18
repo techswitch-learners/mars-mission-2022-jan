@@ -1,11 +1,11 @@
 export function getDiameterInFootballPitches(diameterInMeters) {
-  return diameterInMeters / 100;
+  return Math.round(diameterInMeters * 10);
 }
 
 export function getVelocityByFormulaOneCar(velocityByMeter) {
-  return velocityByMeter / 372;
+  return Math.round((velocityByMeter * 3600) / 397);
 }
 
 export function getDistanceFromEarthByShard(distanceInKm) {
-  return distanceInKm / 310;
+  return Math.round(distanceInKm / 0.3);
 }
