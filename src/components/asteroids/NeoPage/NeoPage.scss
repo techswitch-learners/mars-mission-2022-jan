@@ -64,3 +64,24 @@ span {
     grid-row: 1/2;
   }
 }
+
+@media screen and (min-width: 1000px) {
+  span {
+    margin-left: -9em;
+  }
+  section {
+    grid-template-columns: 6fr 4fr;
+  }
+  form {
+    margin-left: 2em;
+    width: 20vw;
+  }
+  input {
+    padding: 1.5em;
+  }
+  .image {
+    width: 90vw;
+    height: 100vh;
+    margin-left: 2em;
+  }
+}
