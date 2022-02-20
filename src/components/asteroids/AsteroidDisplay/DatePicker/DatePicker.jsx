@@ -4,14 +4,14 @@ export function DatePicker({ setDate, loading }) {
   const [dateValue, setDateValue] = useState("2022-02-01");
 
   return (
-    <section className="date-picker">
+    <section className="neopage-upper-section-date">
       <form
         onSubmit={(e) => {
           e.preventDefault();
           setDate(dateValue);
         }}
       >
-        <label htmlFor="date">Select a date: </label>
+        <label htmlFor="date">Select a date </label>
         <input
           type="date"
           id="date"

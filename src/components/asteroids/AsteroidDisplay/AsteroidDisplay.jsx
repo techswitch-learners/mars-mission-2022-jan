@@ -27,20 +27,29 @@ export function AsteroidDisplay() {
   );
 
   return (
-    <section className="asteroid-grid">
-      <DatePicker date={date} setDate={setDate} loading={loading} />
-      {loading ? (
-        "Loading asteroids for " + date + "..."
-      ) : (
-        <Asteroid
-          loading={loading}
-          error={error}
-          asteroidData={asteroidData}
-          date={date}
-        />
-      )}
-      <ClipLoader loading={loading} size={150} color={"#c0844f"} />
-      <div className="image">
+    <section className="neopage">
+      <div className="neopage-upper-section">
+        <DatePicker date={date} setDate={setDate} loading={loading} />
+        <div className="neopage-upper-section-info">
+          {loading ? (
+            <div className="neopage-upper-section-info-loader-wrapper">
+              Asteroids loading...
+            </div>
+          ) : (
+            <Asteroid
+              loading={loading}
+              error={error}
+              asteroidData={asteroidData}
+              date={date}
+            />
+          )}
+          <div className="neopage-upper-section-info-loader-wrapper">
+            <ClipLoader loading={loading} size={75} color={"#c0844f"} />
+          </div>
+        </div>
+      </div>
+      <div className="neopage-image-wrapper">
+        {/* <p>Hello</p> */}
         <img
           src="https://images.newscientist.com/wp-content/uploads/2020/06/04160433/r4500292-comet_ikeya-zhang_andromeda_galaxy_optical_web.jpg"
           alt="Meteor image"
